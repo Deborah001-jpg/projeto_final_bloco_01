@@ -36,12 +36,12 @@ public class lojaDeAcessorios {
 			
 			keyPress();
 
-			// Entrada de dados
+		
 
 			opcao = leia.nextInt();
-
-			// Processar escolha do usuário
-
+			 leia.nextLine();
+		
+			
 			switch (opcao) {
 			case 1:
 				visualizarCatalogo();
@@ -83,7 +83,6 @@ public class lojaDeAcessorios {
 	private static void visualizarCarrinho() {
 		System.out.println("==== Carrinho ====");
 
-		// Exibir itens no carrinho
 	}
 
 	private static void finalizarCompra() {
@@ -100,7 +99,8 @@ public class lojaDeAcessorios {
 	}
 
 	public static void keyPress() {
+		
+		} 
 
 	}
 
-}
