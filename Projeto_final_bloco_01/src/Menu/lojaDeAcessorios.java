@@ -1,17 +1,29 @@
 package Menu;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+import Produtos.model.Produtos;
 
 public class lojaDeAcessorios {
 
 	public static void main(String[] args) {
-		
+
 		// Variáveis
 
 		Scanner leia = new Scanner(System.in);
 		int opcao;
+		
+		// Lista para armazenar produtos
+		List<Produtos> catalogo = new ArrayList<>();
+		
+		// Produtos do catálogo
 
-		// Loop principal
+		catalogo.add(new Produtos("Capa para Celular", 19.99f));
+		catalogo.add(new Produtos("Fone de Ouvido", 49.99f));
+		catalogo.add(new Produtos("Película Protetora", 9.99f));
+
 		do {
 			// Exibir menu
 			System.out.println("==== Menu da Loja ====");
@@ -21,13 +33,15 @@ public class lojaDeAcessorios {
 			System.out.println("4. Finalizar Compra");
 			System.out.println("5. Sair");
 			System.out.print("Escolha uma opção: ");
+			
+			keyPress();
 
 			// Entrada de dados
-			
+
 			opcao = leia.nextInt();
 
 			// Processar escolha do usuário
-			
+
 			switch (opcao) {
 			case 1:
 				visualizarCatalogo();
@@ -48,7 +62,7 @@ public class lojaDeAcessorios {
 				System.out.println("Opção inválida. Tente novamente.");
 			}
 
-		} while (opcao != 5); 
+		} while (opcao != 5);
 
 		leia.close();
 	}
@@ -68,13 +82,14 @@ public class lojaDeAcessorios {
 
 	private static void visualizarCarrinho() {
 		System.out.println("==== Carrinho ====");
-		
-		//  Exibir itens no carrinho
+
+		// Exibir itens no carrinho
 	}
 
 	private static void finalizarCompra() {
 		System.out.println("Compra finalizada. Obrigado!");
 	}
+
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
 		System.out.println("Projeto Desenvolvido por:DeborahRodrigues ");
@@ -87,5 +102,5 @@ public class lojaDeAcessorios {
 	public static void keyPress() {
 
 	}
-	
+
 }
